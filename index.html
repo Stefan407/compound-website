@@ -7,9 +7,6 @@
 	<title>Tender</title>
 	
 	<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -18,21 +15,37 @@
 	<main>
 		<div class="wrapper">
 			<header class="header" id="main-section" data-aos="fade-down" data-aos-duration="1000">
-				<div class="header__logo">
-					<img src="img/logo.png" alt="">
-				</div>
-				<nav class="header__nav">
-					<ul class="header__nav__menu">
-						<li><a href="#">Markets</a></li>
-						<li><a href="#">Governance</a></li>
-						<li><a href="#">Prices</a></li>
-						<li><a href="#">Docs</a></li>
-					</ul>
-				</nav>
-				<div class="btn header__btn">
-					<a href="#contact">Contact</a>
-				</div>
+					<div class="header__logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+					<nav class="header__nav">
+						<ul class="header__nav__menu">
+							<li><a href="#">Markets</a></li>
+							<li><a href="#">Governance</a></li>
+							<li><a href="#">Prices</a></li>
+							<li><a href="#">Docs</a></li>
+						</ul>
+					</nav>
+					<div class="btn header__btn">
+						<button>Contact</button>
+					</div>
+					<div class="container-burger">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div>
 			</header>
+		</div>
+		<div id="mySidenav" class="sidenav">
+			<a href="##" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#">Markets</a>
+			<a href="#">Governance</a>
+			<a href="#">Clients</a>
+			<a href="#">Prices</a>
+			<div class="btn header__btn">
+				<button>Contact</button>
+			</div>
+		</div>
 			<section class="hero__section">
 				<span class="hero__sub-header">Welcome to</span>
 				<div class="hero__img">
@@ -277,14 +290,6 @@
 							<span>Securtiy Audit</span>
 						</div>
 					</div>
-					<!-- <div class="audit__item">
-						<div class="audit__img">
-							<img src="img/audit-2.png" alt="">
-						</div>
-						<div class="audit__text">
-							<span>Securtiy Audit</span>
-						</div>
-					</div> -->
 
 				</div>
 			</div>

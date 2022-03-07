@@ -139,19 +139,23 @@ table {
 ::-webkit-scrollbar-thumb {
     background: #1CD8D2
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 html {
     font-size: 10px;
     background-color: #040416;
     font-family: 'Noto Sans', sans-serif;
-    color: #fff
+    color: #fff;
+    overflow-x: hidden;
 }
 
 body {
     width: 100%;
     height: 100%
 }
-
+body.lock{
+    height: 100vh;
+    overflow-y: hidden;
+}
 .wrapper {
     max-width: 1200px;
     margin-left: auto;
@@ -215,7 +219,7 @@ main {
     margin-right: 0
 }
 
-.btn a {
+.btn a,button {
     font-size: 1.4em;
     color: #fff;
     padding: 10px 30px;
@@ -224,17 +228,90 @@ main {
     -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
+    border: 0;
+    cursor: pointer;
     text-decoration: none;
     -webkit-transition: 0.2s ease-in;
     -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in
 }
 
-.btn a:hover {
+.btn a,button:hover {
     background: #1CD8D2;
     border-radius: 8px
 }
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+    z-index: 20;
+}
+.sidenav.active{
+	width: 45%;
+	right: 0;
+} 
+.sidenav a {
+	margin-top: 15px;
+	margin-left: 25px;
+	text-decoration: none;
+	font-size: 1.6em;
+	color: #fff;
+	display: block;
+	transition: 0.3s;
+}
 
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.container-burger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
 .hero__section {
     padding-top: 200px;
     text-align: center
@@ -245,7 +322,7 @@ main {
     line-height: 32px;
     letter-spacing: 0.1em;
     color: #1CD8D2;
-    font-size: 900
+    font-weight: 700;
 }
 
 .hero__img {
@@ -298,12 +375,12 @@ main {
 
 .contract__sum {
     font-size: 5em;
-    font-weight: 900;
+    font-weight: 700;
     color: #1CD8D2
 }
 
 section {
-    padding: 60px 0
+    padding: 60px 0;
 }
 
 .protocol__container {
@@ -319,7 +396,7 @@ section {
 }
 
 .section__header {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
     line-height: 32px;
     letter-spacing: 0.2em;
@@ -348,7 +425,8 @@ section {
     left: -25%;
     top: -20%;
     max-width: 100%;
-    height: 100%
+    height: 100%;
+    pointer-events: none;
 }
 
 .protocol__text {
@@ -464,7 +542,8 @@ section {
 
 .try__img-item {
     width: 50px;
-    height: 50px
+    height: 50px;
+    pointer-events: none;
 }
 
 .try__item-header {
@@ -551,7 +630,8 @@ section {
 
 .audit__item {
     width: 150px;
-    height: 100px;
+    height: 127px;
+    height: 127px;
     text-align: center;
     margin-right: 20px;
     margin-top: 40px;
@@ -718,9 +798,11 @@ section {
 
 .bg__audit img {
     position: absolute;
-    left: -15%;
-    top: -50%;
-    max-width: 100%
+    left: 0;
+    pointer-events: none;
+    top: -40%;
+    max-width: 100%;
+    z-index: -2;
 }
 
 .protocol__section {
@@ -730,7 +812,8 @@ section {
 .protocol__bg img {
     position: absolute;
     right: 0;
-    bottom: -50%
+    bottom: -50%;
+    z-index: -2;
 }
 
 .try__section {
@@ -739,10 +822,12 @@ section {
 
 .try__bg img {
     position: absolute;
-    bottom: 0
+    bottom: 0;
+    z-index: -2;
 }
 
 .try__bg2 img {
     position: absolute;
-    right: 0
+    right: 0;
+    z-index: -2;
 }

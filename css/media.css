@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 @media (max-width: 1080px){
 	.audit__container{
 		-ms-flex-wrap: wrap;
@@ -100,19 +93,24 @@
 		margin-top: 25px;
 	}
 	.try__item{
-		width: 40%;
+		width: 44%;
 		padding: 20px 15px;
 	}
 	.try__item-text{
 		line-height: 1.2;
 	}
 
+	.sub__content{
+		display: flex;
+		flex-wrap: wrap;
+	}
 	.sub__btn{
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
+				  margin-top: 10px;
 	}
 	.sub__text{
 		width: 100%;
@@ -130,24 +128,13 @@
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-	.header__logo{
-		-webkit-box-ordinal-group: 2;
-		    -ms-flex-order: 1;
-		        order: 1;
-	}
 	.header__btn{
-		-webkit-box-ordinal-group: 3;
-		    -ms-flex-order: 2;
-		        order: 2;
+		display: none;
 	}
-	.header__nav{
-		-webkit-box-ordinal-group: 4;
-		    -ms-flex-order: 3;
-		        order: 3;
-		-webkit-box-flex: 0;
-		    -ms-flex: 0 0 100%;
-		        flex: 0 0 100%;
-		padding-top: 10px;
+	.sidenav .header__btn{
+		display: block;
+		margin-left: 25px;
+		margin-top: 25px;
 	}
 	.header__nav__menu{
 		-webkit-box-pack: justify;
@@ -167,6 +154,12 @@
 	}
 	.contract__sum{
 		font-size: 4em;
+	}
+	.container-burger {
+		display: inline-block;
+	}
+	.header__nav{
+		display: none;
 	}
 }
 @media (max-width: 555px){
@@ -213,10 +206,10 @@
 		    flex-wrap: wrap;
 	}
 	.footer__menu-column{
-		width: 100%;
+		width: 45%;
 		-webkit-box-flex: 0;
-		    -ms-flex: 0 0 100%;
-		        flex: 0 0 100%;
+		    -ms-flex: 0 0 45%;
+		        flex: 0 0 45%;
 	}
 	.footer__menu-column li{
 		padding-top: 10px;
@@ -272,4 +265,8 @@
 	.sub__text{
 		font-size: 1.6em;
 	}
+	.sidenav.active{
+		width: 60%;
+		right: 0;
+	} 
 }
